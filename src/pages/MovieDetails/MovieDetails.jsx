@@ -52,7 +52,7 @@ const MovieDetails = () => {
   return (
     <>
       <Link to={location.state?.from ?? '/'}>
-        <Button type="button">Go back</Button>
+        <Button type="button">Back</Button>
       </Link>
       {loading && <Loader />}
 

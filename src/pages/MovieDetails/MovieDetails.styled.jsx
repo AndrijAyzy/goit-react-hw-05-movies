@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   margin: 24px;
   gap: 24px;
+  color: #f0e813;
 `;
 
 export const List = styled.ul`
@@ -14,6 +15,7 @@ export const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style-type: none;
+  color: #f0e813;
 `;
 
 export const ListInfo = styled.ul`
@@ -24,32 +26,32 @@ export const ListInfo = styled.ul`
   margin: 0;
   padding: 0;
   list-style-type: none;
+  color: #f0e813;
 `;
 
 export const LinkInfo = styled(Link)`
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
-  color: #191d1e;
+  color: yellow;
 
   &:hover {
-    color: tomato;
+    color: #e538fc;
   }
 `;
 
 export const Button = styled.button`
-  padding: 8px 8px;
-  font: inherit;
-  cursor: pointer;
-  border-radius: 4px;
-  border: 3px solid #191d1e;
-  color: #191d1e;
-  font-weight: 600;
-  font-size: 20px;
-  border-radius: 4px 8px;
+padding: 10px 10px;
+cursor: pointer;
+border-radius: 4px;
+border: 3px solid #000000;
+color: #000000;
+font-weight: 600;
+font-size: 20px;
+border-radius: 10px;
 
-  &:hover {
-    color: tomato;
-    border: 3px solid tomato;
-  }
+&:hover {
+  color: #e538fc;
+  border: 3px solid gold;
+}
 `;

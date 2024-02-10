@@ -5,9 +5,9 @@ const Loader = () => {
   return (
     <Container>
       <BallTriangle
-        height="100"
-        width="100"
-        color="tomato"
+        height="120"
+        width="120"
+        color="yellow"
         ariaLabel="loading"
       />
     </Container>

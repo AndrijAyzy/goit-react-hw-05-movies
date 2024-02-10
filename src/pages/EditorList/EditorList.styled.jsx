@@ -13,9 +13,9 @@ export const Item = styled.li`
 
 export const MovieLink = styled(Link)`
   text-decoration: none;
-  color: #191d1e;
+  color: #ebd702;
 
   &:hover {
-    color: tomato;
+    color: #e538fc;
   }
 `;

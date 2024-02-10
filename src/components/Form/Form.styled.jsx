@@ -14,28 +14,27 @@ export const Input = styled.input`
   font-weight: 600;
   font-size: 20px;
   margin-right: 10px;
-  border-radius: 4px 8px;
+  border-radius: 10px;
   outline: none;
 
   &:hover {
-    color: tomato;
-    border: 3px solid tomato;
+    color: #000000;
+    border: 3px solid gold;
   }
 `;
 
 export const Button = styled.button`
   padding: 12px 12px;
-  font: inherit;
   cursor: pointer;
   border-radius: 4px;
-  border: 3px solid #191d1e;
-  color: #191d1e;
+  border: 3px solid #000000;
+  color: #000000;
   font-weight: 600;
   font-size: 20px;
-  border-radius: 4px 8px;
+  border-radius: 10px;
 
   &:hover {
-    color: tomato;
-    border: 3px solid tomato;
+    color: red;
+    border: 3px solid gold;
   }
 `;
