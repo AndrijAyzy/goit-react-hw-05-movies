@@ -1,7 +1,7 @@
 import { useSearchParams, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { getFilm } from 'services/fetchFilm';
+import { getFilm } from 'services/SearFilm';
 import { Link } from 'react-router-dom';
 
 const ListOfFilm = styled.ul`
