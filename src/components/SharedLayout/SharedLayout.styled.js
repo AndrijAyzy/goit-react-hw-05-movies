@@ -3,28 +3,27 @@ import { NavLink } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
   padding: 20px 30px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0px 4px 4px #d3d3d3;
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  display: inline-block;
-  font-size: 24px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
+font-size: 20px;
+margin-right: 50px;
+padding: 5px 15px;
+border: 1px solid #000000;
+border-radius: 10px;
+background-color: #626466;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
+color: #ffffff;
+
+&:hover,
+&:focus {
+  background-color: #ede207;
   color: #000000;
-
-  &:not(:last-child) {
-    margin-right: 40px;
-  }
-
-  &.active,
-  &:hover,
-  &:focus {
-    color: #1c85ff;
-    text-decoration: underline;
-  }
+  box-shadow: #ede207;
+}
 `;
 
 const bounce = keyframes`

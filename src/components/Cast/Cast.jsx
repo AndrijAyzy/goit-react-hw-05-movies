@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'; 
 import { fetchMovieCast } from '../../services/api';
 import {
-  CastHeader,
   CastInfo,
   CastList,
   CastListItem,
@@ -30,7 +29,6 @@ const Cast = () => {
 
   return (
     <Wrapper>
-      <CastHeader>Cast</CastHeader>
 
       {cast.length ? (
         <CastList>

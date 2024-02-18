@@ -5,17 +5,20 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  border: 1px solid #0d57aa;
-  border-radius: 6px;
-  background-color: #b5d1f2;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+font-size: 20px;
+margin-right: 5px;
+padding: 5px 10px;
+border: 1px solid #000000;
+border-radius: 5px;
+background-color: #626466;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
+color: #ffffff;
 
-  &:hover,
-  &:focus {
-    background-color: #0d57aa;
-    color: #ffffff;
-  }
+&:hover,
+&:focus {
+  background-color: #ede207;
+  color: #000000;
+  box-shadow: #ede207;
+}
 `;

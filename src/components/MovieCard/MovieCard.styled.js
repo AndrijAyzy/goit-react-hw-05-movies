@@ -10,6 +10,7 @@ export const MovieCardContainer = styled.div`
 export const Img = styled.img`
   height: 600px;
   width: 400px;
+  border-radius: 8px 20px;
 `;
 
 export const MovieInfo = styled.div`
@@ -61,21 +62,20 @@ export const ListItem = styled.li`
 `;
 
 export const StyledLink = styled(Link)`
-  font-size: 16px;
+  font-size: 20px;
   margin-right: 5px;
   padding: 5px 15px;
-  border: 1px solid #0d57aa;
-  border-radius: 6px;
-  background-color: #b5d1f2;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #626466;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  color: #0d57aa;
+  color: #ffffff;
 
   &:hover,
   &:focus {
-    background-color: #0d57aa;
-    color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background-color: #ede207;
+    color: #000000;
+    box-shadow: #ede207;
   }
 `;
