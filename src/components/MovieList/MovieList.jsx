@@ -5,7 +5,7 @@ import {
   SectionTitle,
   List,
   ListItem,
-} from './MovieList.styled'; // додаємо стилі
+} from './MovieList.styled';
 
 const MovieList = ({ trendingMovies }) => {
   return (
@@ -39,5 +39,3 @@ MovieList.propTypes = {
     })
   ).isRequired,
 };
-
-// Діма Берестень
