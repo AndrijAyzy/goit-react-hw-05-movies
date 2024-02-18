@@ -6,6 +6,7 @@ export const Form = styled.form`
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  margin-top: 40px;
 `;
 
 export const Input = styled.input`

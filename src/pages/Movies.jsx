@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams, useLocation } from 'react-router-dom'; 
+import { useSearchParams } from 'react-router-dom'; 
 import { toast } from 'react-hot-toast';
 import { fetchMovieByName } from '../services/api';
 import SearchMovies from '../components/SearchMovies/SearchMovies';
-import {
-  List,
-  ListItem,
-  SectionTitle,
-  StyledLink,
-  StyledSection,
-} from '../components/MovieList/MovieList.styled'; 
+import MovieList from '../components/MovieList/MovieList'; 
+import { LoadingIndicator } from 'components/SharedLayout/LoadingDots';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false); 
+  const [error, setError] = useState(null);  
   const [searchParams, setSearchParams] = useSearchParams();
-  const location = useLocation();
 
   useEffect(() => {
     const query = searchParams.get('query') ?? '';
@@ -22,6 +18,7 @@ const Movies = () => {
 
     const getMovie = async () => {
       try {
+        setIsLoading(true); 
         const { results } = await fetchMovieByName(query);
 
         if (results.length === 0) {
@@ -32,12 +29,14 @@ const Movies = () => {
           setMovies(results); 
         }
       } catch (error) {
-        toast.error(error.message);
+        setError(error.message);  
         setMovies([]);
+      } finally {
+        setIsLoading(false);
       }
     };
 
-      getMovie();
+    getMovie();
   }, [searchParams]);
 
   const handleSubmit = query => {
@@ -46,22 +45,16 @@ const Movies = () => {
 
   return (
     <main>
-      <StyledSection>
-        <SectionTitle>Movies Page</SectionTitle>
-
-        <SearchMovies onSubmit={handleSubmit} />
-
-        <List>
-          {movies.map(movie => (
-            <ListItem key={movie.id}>
-
-              <StyledLink to={`/movies/${movie.id}`} state={{ from: location }}>
-                {movie.title}
-              </StyledLink>
-            </ListItem>
-          ))}
-        </List>
-      </StyledSection>
+      <SearchMovies onSubmit={handleSubmit} />
+      {isLoading ? (
+        <LoadingIndicator />
+      ) : error ? (
+        <p>
+          Sorry, we could not fetch the trending movies. Please try again later.
+        </p>
+      ) : (
+        <MovieList trendingMovies={movies} />
+      )}
     </main>
   );
 };

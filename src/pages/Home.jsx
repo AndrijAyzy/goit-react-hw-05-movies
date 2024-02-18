@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { fetchTrendMovies } from '../services/api';
 import MovieList from 'components/MovieList/MovieList'; 
 import { LoadingIndicator } from 'components/SharedLayout/LoadingDots';
@@ -8,7 +8,6 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
- 
   useEffect(() => {
     const fetchTrendingMovies = async () => {
       try {
@@ -28,7 +27,6 @@ const Home = () => {
 
   return (
     <>
-      {}
       {isLoading ? (
         <LoadingIndicator />
       ) : error ? (
